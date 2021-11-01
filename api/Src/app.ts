@@ -4,6 +4,8 @@ import dotenv from 'dotenv'
 import morgan from 'morgan'
 import cors from 'cors'
 import bodyParser from 'body-parser'
+import getProject from './routes/projects/get'
+import postProject from './routes/projects/post'
 
 dotenv.config()
 
@@ -44,6 +46,13 @@ export default function App(port: number){
     app.use(morgan('dev'))
     app.use(cors())
 
+    /*
+        Creacion de Res Api
+    */
+
+    app.use('/Project', getProject)
+    app.use('/Project', postProject)
+    
    /*
         Llamada al puerto
    */

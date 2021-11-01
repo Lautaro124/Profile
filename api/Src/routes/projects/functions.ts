@@ -1,9 +1,9 @@
-import { ProjectModel } from '../../models'
+import { ProjectModel } from '../../models/models'
 
 /*
     Función para optener todos los proyectos
 */
-const getProjects = async () => {
+export const getProjects = async () => {
 
     try{
 
@@ -20,8 +20,8 @@ const getProjects = async () => {
 /*
     Función para crear un proyecto
 */
-const postProject = async (title: string, description: string, img: string, colaborations: string) => {
-
+export const postProject = async (title: string, description: string, img: string, colaborations: string) => {
+    
     try{
         await ProjectModel.create({title, description, img, colaborations})
 
@@ -36,7 +36,7 @@ const postProject = async (title: string, description: string, img: string, cola
 /*
     Función para borrar muchos proyectos
 */
-const deleteProjects = async (title: string) => {
+export const deleteProjects = async (title: string) => {
 
     try{
 
@@ -44,13 +44,16 @@ const deleteProjects = async (title: string) => {
 
         return 'Deleted'
     }
-    catch (err:any) {
+    catch (err: any) {
 
         throw Error(err)
     }
 }
 
-const putProject = async (id: string,title: string, description: string, img: string, colaborations: string) => {
+/*
+    Funcion para poder cambiar un proyecto
+*/
+export const putProject = async (id: string,title: string, description: string, img: string, colaborations: string) => {
 
     try{
 
@@ -63,6 +66,7 @@ const putProject = async (id: string,title: string, description: string, img: st
         throw Error(err)
     }
 }
+
 
 module.exports= {
     getProjects,
