@@ -20,6 +20,8 @@ const cors_1 = __importDefault(require("cors"));
 const body_parser_1 = __importDefault(require("body-parser"));
 const get_1 = __importDefault(require("./routes/projects/get"));
 const post_1 = __importDefault(require("./routes/projects/post"));
+const delete_1 = __importDefault(require("./routes/projects/delete"));
+const put_1 = __importDefault(require("./routes/projects/put"));
 dotenv_1.default.config();
 const conect = () => __awaiter(void 0, void 0, void 0, function* () {
     /*
@@ -54,8 +56,11 @@ function App(port) {
     /*
         Creacion de Res Api
     */
+    /// Rutas de proyectos
     app.use('/Project', get_1.default);
     app.use('/Project', post_1.default);
+    app.use('/Project', delete_1.default);
+    app.use('/Project', put_1.default);
     /*
          Llamada al puerto
     */

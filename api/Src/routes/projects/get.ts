@@ -1,7 +1,7 @@
-import express, { Request, Response, NextFunction } from 'express'
+import express, { Application, Request, Response, NextFunction } from 'express'
 import { getProjects } from './functions'
 
-const app = express()
+const app: Application = express()
 
 /* 
     Ruta para obtener todos los proyectos

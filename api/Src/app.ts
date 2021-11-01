@@ -6,6 +6,8 @@ import cors from 'cors'
 import bodyParser from 'body-parser'
 import getProject from './routes/projects/get'
 import postProject from './routes/projects/post'
+import deleteProject from './routes/projects/delete'
+import putProject from './routes/projects/put'
 
 dotenv.config()
 
@@ -49,10 +51,13 @@ export default function App(port: number){
     /*
         Creacion de Res Api
     */
-
+   
+    /// Rutas de proyectos
     app.use('/Project', getProject)
     app.use('/Project', postProject)
-    
+    app.use('/Project', deleteProject)
+    app.use('/Project', putProject)
+
    /*
         Llamada al puerto
    */

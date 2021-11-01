@@ -21,7 +21,7 @@ export const getProjects = async () => {
     Función para crear un proyecto
 */
 export const postProject = async (title: string, description: string, img: string, colaborations: string) => {
-    
+
     try{
         await ProjectModel.create({title, description, img, colaborations})
 
@@ -36,11 +36,11 @@ export const postProject = async (title: string, description: string, img: strin
 /*
     Función para borrar muchos proyectos
 */
-export const deleteProjects = async (title: string) => {
+export const deleteProject = async (id: string) => {
 
     try{
 
-        await ProjectModel.deleteMany({title: title})
+        await ProjectModel.deleteOne({_id: id})
 
         return 'Deleted'
     }
@@ -71,6 +71,6 @@ export const putProject = async (id: string,title: string, description: string, 
 module.exports= {
     getProjects,
     postProject,
-    deleteProjects,
+    deleteProject,
     putProject
 }

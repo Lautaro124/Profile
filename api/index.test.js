@@ -1,5 +1,5 @@
 var assert = require('assert')
-const { getProjects, postProject, deleteProjects, putProject } = require('./dist/routes/projects/functions') 
+const { getProjects, postProject, deleteProject, putProject } = require('./dist/routes/projects/functions') 
 
 const projects = {title: 'Test 1', description:'Testeo1', img:'http//Tet1.com', colaborations: 'Testeo1'}
 
@@ -15,7 +15,7 @@ describe('TEST DATA MONGO', () => {
 
     afterEach( () => {
 
-        deleteProjects('test')
+        deleteProject('test')
     })
 
     describe('Data projects', () => {

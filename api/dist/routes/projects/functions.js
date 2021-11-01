@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.putProject = exports.deleteProjects = exports.postProject = exports.getProjects = void 0;
+exports.putProject = exports.deleteProject = exports.postProject = exports.getProjects = void 0;
 const models_1 = require("../../models/models");
 /*
     Función para optener todos los proyectos
@@ -40,16 +40,16 @@ exports.postProject = postProject;
 /*
     Función para borrar muchos proyectos
 */
-const deleteProjects = (title) => __awaiter(void 0, void 0, void 0, function* () {
+const deleteProject = (id) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        yield models_1.ProjectModel.deleteMany({ title: title });
+        yield models_1.ProjectModel.deleteOne({ _id: id });
         return 'Deleted';
     }
     catch (err) {
         throw Error(err);
     }
 });
-exports.deleteProjects = deleteProjects;
+exports.deleteProject = deleteProject;
 /*
     Funcion para poder cambiar un proyecto
 */
@@ -66,6 +66,6 @@ exports.putProject = putProject;
 module.exports = {
     getProjects: exports.getProjects,
     postProject: exports.postProject,
-    deleteProjects: exports.deleteProjects,
+    deleteProject: exports.deleteProject,
     putProject: exports.putProject
 };
