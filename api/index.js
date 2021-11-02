@@ -1,4 +1,4 @@
-import App from './dist/app'
+const App = require('./dist/app')
 
 async function main() {
 

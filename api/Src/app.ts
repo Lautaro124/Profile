@@ -54,9 +54,9 @@ export default function App(port: number){
    
     /// Rutas de proyectos
     app.use('/Project', getProject)
-    app.use('/Project', postProject)
-    app.use('/Project', deleteProject)
-    app.use('/Project', putProject)
+    app.use('/Project/Create', postProject)
+    app.use('/Project/Delete', deleteProject)
+    app.use('/Project/Change', putProject)
 
    /*
         Llamada al puerto

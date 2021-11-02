@@ -58,9 +58,9 @@ function App(port) {
     */
     /// Rutas de proyectos
     app.use('/Project', get_1.default);
-    app.use('/Project', post_1.default);
-    app.use('/Project', delete_1.default);
-    app.use('/Project', put_1.default);
+    app.use('/Project/Create', post_1.default);
+    app.use('/Project/Delete', delete_1.default);
+    app.use('/Project/Change', put_1.default);
     /*
          Llamada al puerto
     */
