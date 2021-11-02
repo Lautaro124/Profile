@@ -1,4 +1,4 @@
-import App from './app'
+import App from './dist/app'
 
 async function main() {
 
