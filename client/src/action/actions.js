@@ -2,6 +2,9 @@ import { GET_PROJECTS, POST_PROJECTS, PUT_PROJECTS, DELETE_PROJECTS } from './co
 import { get_projects, post_projects, delete_projects, put_projects } from '../routes'
 import axios from 'axios'
 
+/*
+    Funcion para obtener todos los proyectos
+*/
 export function getProjects () {
     return async function(dispatch) {
 
@@ -19,6 +22,9 @@ export function getProjects () {
     }
 }
 
+/*
+    Funcion para crear un nuevo proyecto 
+*/
 export function postProject ({title, description, img, colaborations}) {
     return async function (dispatch) {
 

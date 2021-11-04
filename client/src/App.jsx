@@ -1,9 +1,12 @@
 import React,{ useEffect } from 'react'
 import Home from './components/home/Home'
+import './App.css'
+import LandingPage from './components/landingPage/LandingPage'
 import { useDispatch } from 'react-redux'
 import { getProjects } from './action/actions'
+import { BrowserRouter, Route } from 'react-router-dom'
 
-function App() {
+export default function App() {
 
   const dispatch = useDispatch()
   useEffect(() => {
@@ -14,10 +17,11 @@ function App() {
   },[dispatch])
 
   return (
-    <div>
-      <Home/>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Route exact path='/' component={LandingPage}/>
+        <Route path='/Home' component={Home}/>
+      </div>
+    </BrowserRouter>
   );
 }
-
-export default App;
