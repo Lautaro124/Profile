@@ -14,10 +14,9 @@ export default function Home() {
 
     return (
         <div className={styles.projectContent}>
-            <section id='page1' className={styles.cardContent}>
+            <section id='page1' className={styles.titleContent}>
                 <div className={styles.titleproject}>
                     <Typography variant='h2'>Mis proyectos</Typography>
-
                     <Link to='page2' spy={true} smooth={true} delay={80}>
                         <Button>Ver Primer proyecto</Button>
                     </Link>

@@ -1,5 +1,5 @@
-import { GET_PROJECTS, POST_PROJECTS, PUT_PROJECTS, DELETE_PROJECTS } from './constrain'
-import { get_projects, post_projects, delete_projects, put_projects } from '../routes'
+import { GET_PROJECTS, POST_PROJECTS, POST_USER } from './constrain'
+import { get_projects, post_projects } from '../routes'
 import axios from 'axios'
 
 /*
@@ -38,6 +38,29 @@ export function postProject ({title, description, img, colaborations}) {
         }
         catch (err) {
             alert(err)
+        }
+    }
+}
+
+
+
+/*
+    Funcion para crear un nuevo usuario 
+*/
+export function createUser({userName, firstName, lastName, age, mail, feedback, password}){
+
+    return async function(dispatch){
+
+        try{
+            const user = await axios.post('',{userName, firstName, lastName, age, mail, feedback, password, recluter: true})
+
+            return dispatch({
+                type: POST_USER,
+                payload: user.data
+            })
+        }
+        catch (err) {
+            alert(err.message)
         }
     }
 }

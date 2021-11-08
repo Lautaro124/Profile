@@ -1,5 +1,6 @@
 import React,{ useEffect } from 'react'
 import Home from './components/home/Home'
+import Project from './components/forms/createProjects/Project'
 import './App.css'
 import LandingPage from './components/landingPage/LandingPage'
 import { useDispatch } from 'react-redux'
@@ -21,6 +22,7 @@ export default function App() {
       <div className="App">
         <Route exact path='/' component={LandingPage}/>
         <Route path='/Home' component={Home}/>
+        <Route path='/Create_Project' component={Project}/>
       </div>
     </BrowserRouter>
   );

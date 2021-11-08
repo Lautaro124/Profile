@@ -12,6 +12,11 @@ export default function LandingPage() {
                     Iniciar Recorrido
                 </Button>
             </Link>
+            <Link to='/Create_Project'>
+                <Button variant='contained' className={styles.links}>
+                    Create Project
+                </Button>
+            </Link>
         </div>
     )
 }

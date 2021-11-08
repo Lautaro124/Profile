@@ -5,7 +5,7 @@ import { Schema } from 'mongoose'
 */
 interface User {
 
-    username: string;
+    userName: string;
     firstName: string;
     lastName: string;
     age: number;
@@ -20,7 +20,7 @@ interface User {
 */
 const schema = new Schema<User>({
 
-    username: { type: String, required: true,validate: {
+    userName: { type: String, required: true,validate: {
 
         validator: (value: string) => {
             const re = /^[^{}<>#$%&~^`/*+¿?¡!@]*$/g;
