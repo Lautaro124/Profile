@@ -32,7 +32,9 @@ export default function Card({index, title, description, img, colaborations}) {
                     <Link to={`page${index + 3}`} spy={true} smooth={true} delay={80}>
                         <Button>Next{' -->'}</Button>
                     </Link>: 
-                    null      
+                    <Link to='contact' spy={true} smooth={true} delay={80}>
+                        <Button>Next{' -->'}</Button>
+                    </Link>  
                 }
             </div>
 

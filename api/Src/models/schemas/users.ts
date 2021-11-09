@@ -6,13 +6,8 @@ import { Schema } from 'mongoose'
 interface User {
 
     userName: string;
-    firstName: string;
-    lastName: string;
-    age: number;
-    recluter: boolean;
     mail: string;
     feedback: string;
-    password: string;
 }
 
 /*
@@ -31,30 +26,6 @@ const schema = new Schema<User>({
             return true
         }
     } },
-    firstName: { type: String, required: true ,validate: {
-
-        validator: (value: string) => {
-            const re = /[^A-Za-z]/g
-
-            if(!re.test(value)) {
-                return false
-            }
-            return true
-        }
-    } },
-    lastName: { type: String, required: true, validate: {
-
-        validator: (value: string) => {
-            const re = /[^A-Za-z]/g
-
-            if(!re.test(value)) {
-                return false
-            }
-            return true
-        }
-    } },
-    age: { type: Number, required: true },
-    recluter: { type: Boolean, required: true },
     mail: { type: String, required: true, validate: {
 
         validator: function (value: any) {
@@ -65,8 +36,7 @@ const schema = new Schema<User>({
             return true;
         }
     } },
-    feedback: { type: String, required: false },
-    password: { type: String, required:true }
+    feedback: { type: String, required: false }
 })
 
 export default schema

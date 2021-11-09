@@ -1,32 +1,29 @@
 import React, { useState } from 'react'
-import { FormControl, TextField, Box, Button } from '@mui/material'
+import { TextField, Box, Button, Typography } from '@mui/material'
 
 export default function Project() {
 
-  const [ name, setName ] = useState(false)
-  const [ description, setDescription ] = useState(false)
-  const [ colaborations, setColaborations ] = useState(false)
+  const [ colaborator, setColaborator ] = useState([])
+  const [ names, setNames ] = useState('')
+  const [ link, setLink ] = useState('')
 
-  const handleChange = (event) => {
+  const addColaborator = (colaborator, linkedin) => {
 
-    switch (event.name){
-
-      default:
-        setName(false)
-        setDescription(false)
-        setColaborations(false)
-    }
+    setColaborator([...colaborator,{name: colaborator, linkedin}])
   }
-
   return (
     <Box>
-      <FormControl>
-        <TextField name='Name' label='Project Name' onChange={e => handleChange(e)} error={name}/>
-        <TextField name='Description' label='Description' onChange={e => handleChange(e)} error={description}/>
-        <TextField name='Colaboration' label='Colaboration' onChange={e => handleChange(e)} error={colaborations}/>
-        <TextField />
-        <Button type='submit'>Create</Button>
-      </FormControl>
+        <TextField label='Project Name' />
+        <TextField label='Description' />
+        <TextField label='Colaboration' onChange={e => setNames(e.target.value)} value={names}/>
+        <TextField label='Linkedin Colaborator' onChange={e => setLink(e.target.value)} value={link}/>
+        <Button onClick={addColaborator(names, link)}>Add Colaborator</Button>
+        {
+          colaborator?.map(person => 
+            <Typography>Nombre: {person.name} Linkedin: {person.linkedin}</Typography>
+          )
+        }
+        <Button>Create</Button>
     </Box>
   )
 }

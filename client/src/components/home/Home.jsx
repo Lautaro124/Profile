@@ -1,5 +1,7 @@
 import React from 'react'
 import Card from '../card/Card'
+import LandingPage from '../landingPage/LandingPage'
+import Contact from '../contact/Contact'
 import { useSelector } from 'react-redux'
 import { Button, Typography  } from '@mui/material'
 import { Link } from 'react-scroll'
@@ -14,6 +16,9 @@ export default function Home() {
 
     return (
         <div className={styles.projectContent}>
+            <section id='page0'>
+                <LandingPage/>
+            </section>
             <section id='page1' className={styles.titleContent}>
                 <div className={styles.titleproject}>
                     <Typography variant='h2'>Mis proyectos</Typography>
@@ -33,6 +38,8 @@ export default function Home() {
                         index={index}/>
                 )
             }
+
+            <Contact/>
         </div>
     )
 }
