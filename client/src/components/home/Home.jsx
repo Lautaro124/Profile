@@ -3,8 +3,7 @@ import Card from '../card/Card'
 import LandingPage from '../landingPage/LandingPage'
 import Contact from '../contact/Contact'
 import { useSelector } from 'react-redux'
-import { Button, Typography  } from '@mui/material'
-import { Link } from 'react-scroll'
+import About from '../about/About'
 import styles from '../../styles/default.module.css'
 
 export default function Home() {
@@ -20,25 +19,24 @@ export default function Home() {
                 <LandingPage/>
             </section>
             <section id='page1' className={styles.titleContent}>
-                <div className={styles.titleproject}>
-                    <Typography variant='h2'>Mis proyectos</Typography>
-                    <Link to='page2' spy={true} smooth={true} delay={80}>
-                        <Button>Ver Primer proyecto</Button>
-                    </Link>
-                </div>
+                <About/>
             </section>
-            {
-                projects?.map((project, index) => 
-                    <Card
-                        key={index} 
-                        title={project.title} 
-                        description={project.description}
-                        img={project.img} 
-                        colaborations={project.colaborations}
-                        index={index}/>
-                )
-            }
-
+            <section id='web'>
+                {
+                    projects?.map((project, index) => 
+                        <Card
+                            key={index} 
+                            title={project.title} 
+                            description={project.description}
+                            img={project.img} 
+                            colaborations={project.colaborations}
+                            index={index}/>
+                    )
+                }
+            </section>
+            <section id='mobile'>
+                <h1>Mobile</h1>
+            </section>
             <Contact/>
         </div>
     )

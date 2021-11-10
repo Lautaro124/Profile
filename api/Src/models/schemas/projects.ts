@@ -19,6 +19,7 @@ const schema = new Schema<Project>({
     description: { type: String, required: true },
     img: { type: String, required: true },
     colaborations: { type: String, required: true}
+    
 })
 
 export default schema

@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from '../../styles/default.module.css'
-import { Button, Typography  } from '@mui/material'
 import { Link } from 'react-scroll'
 import { useSelector } from 'react-redux'
 
@@ -12,8 +11,8 @@ export default function Card({index, title, description, img, colaborations}) {
         <section id={`page${index + 2}`} className={styles.cardContent}>
 
             <div className={styles.cardTitles}>
-                <Typography variant='h5'>{title}</Typography>
-                <Typography variant='span'>{description}</Typography>
+                <h4>{title}</h4>
+                <span>{description}</span>
             </div>
             <img className={styles.cardImg} src={img} alt= 'None'/>
             <div className={styles.cardReference}>
@@ -22,18 +21,18 @@ export default function Card({index, title, description, img, colaborations}) {
 
             <div className={styles.cardButtons}>
                 <Link to={`page${index + 1}`} spy={true} smooth={true} delay={80}>
-                    <Button>{'<-- '}Back</Button>
+                    <button>{'<-- '}Back</button>
                 </Link>
-                <Link to={`page1`} spy={true} smooth={true} delay={80}>
-                    <Button>Inicio</Button>
+                <Link to={`landing-page`} spy={true} smooth={true} delay={80}>
+                    <button>Inicio</button>
                 </Link>
                 {
                     array.length !== index + 1?
                     <Link to={`page${index + 3}`} spy={true} smooth={true} delay={80}>
-                        <Button>Next{' -->'}</Button>
+                        <button>Next{' -->'}</button>
                     </Link>: 
                     <Link to='contact' spy={true} smooth={true} delay={80}>
-                        <Button>Next{' -->'}</Button>
+                        <button>Next{' -->'}</button>
                     </Link>  
                 }
             </div>

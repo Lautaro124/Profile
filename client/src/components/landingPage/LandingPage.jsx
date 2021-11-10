@@ -1,22 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Button, Typography  } from '@mui/material'
+import { Link } from 'react-scroll'
 import styles from '../../styles/default.module.css'
 
 export default function LandingPage() {
     return (
-        <div className={styles.content}>
-            <Typography variant='h2'>Bienvenidos a mi portafolio</Typography>
-            <Link to='/Home' className={styles.links}>
-                <Button variant='contained' className={styles.links}>
-                    Iniciar Recorrido
-                </Button>
+        <section id="landing-page" className={styles.content}>
+            <h1>Bienvenidos</h1>
+            <h4>Me llamo lautaro Gonzalez y soy un desarrollador full stack</h4>
+            <Link to='page1' spy={true} smooth={true} delay={80}>
+                <button variant='contained' className={styles.links}>
+                    About me
+                </button>
             </Link>
-            <Link to='/Create_Project'>
-                <Button variant='contained' className={styles.links}>
-                    Create Project
-                </Button>
-            </Link>
-        </div>
+        </section>
     )
 }
