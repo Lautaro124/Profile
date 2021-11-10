@@ -1,5 +1,1 @@
 export const GET_PROJECTS = 'GET_PROJECTS'
-export const POST_PROJECTS = 'POST_PROJECTS'
-export const PUT_PROJECTS = 'PUT_PROJECTS'
-export const DELETE_PROJECTS = 'DELETE_PROJECTS'
-export const POST_USER= 'POST_USER'
