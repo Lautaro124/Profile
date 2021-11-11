@@ -28,7 +28,30 @@
   align-items: center;
 }
 
+.list{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.butons{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  gap: 2%;
+}
+
 .span{
-  text-align: justify;
+  text-align: left;
   width: 80%;
 }

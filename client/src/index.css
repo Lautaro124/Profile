@@ -16,6 +16,11 @@ code {
     monospace;
 }
 
+button{
+  background-color: transparent;
+  color: var(--color-Default);
+}
+
 
 :root{
   --body-color: rgb(17, 17, 17);

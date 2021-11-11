@@ -15,9 +15,8 @@ export default function Home() {
 
     return (
         <div className={styles.projectContent}>
-            <section id='page0'>
-                <LandingPage/>
-            </section>
+            
+            <LandingPage/>
             <section id='page1' className={styles.titleContent}>
                 <About/>
             </section>

@@ -13,7 +13,7 @@ export default function Contact() {
         <h3>Celular</h3>
       </div>
 
-      <Link to='page0' spy={true} smooth={true} delay={80}>
+      <Link to='landing-page' spy={true} smooth={true} delay={80}>
         <button>
           Inicio
         </button>

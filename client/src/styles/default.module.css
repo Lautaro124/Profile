@@ -12,6 +12,9 @@
 .links{
     text-decoration: none !important;
     font-style: none !important;
+    border: 2px solid;
+    border-color: var(--color-Default);
+    border-radius: .25rem;
 }
 
 .projectContent{
