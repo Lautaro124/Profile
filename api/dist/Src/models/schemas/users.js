@@ -5,7 +5,7 @@ const mongoose_1 = require("mongoose");
     Creación del schema
 */
 const schema = new mongoose_1.Schema({
-    username: { type: String, required: true, validate: {
+    userName: { type: String, required: true, validate: {
             validator: (value) => {
                 const re = /^[^{}<>#$%&~^`/*+¿?¡!@]*$/g;
                 if (!re.test(value)) {
@@ -14,26 +14,6 @@ const schema = new mongoose_1.Schema({
                 return true;
             }
         } },
-    firstName: { type: String, required: true, validate: {
-            validator: (value) => {
-                const re = /[^A-Za-z]/g;
-                if (!re.test(value)) {
-                    return false;
-                }
-                return true;
-            }
-        } },
-    lastName: { type: String, required: true, validate: {
-            validator: (value) => {
-                const re = /[^A-Za-z]/g;
-                if (!re.test(value)) {
-                    return false;
-                }
-                return true;
-            }
-        } },
-    age: { type: Number, required: true },
-    recluter: { type: Boolean, required: true },
     mail: { type: String, required: true, validate: {
             validator: function (value) {
                 const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -43,7 +23,6 @@ const schema = new mongoose_1.Schema({
                 return true;
             }
         } },
-    feedback: { type: String, required: false },
-    password: { type: String, required: true }
+    feedback: { type: String, required: false }
 });
 exports.default = schema;

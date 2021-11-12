@@ -8,6 +8,7 @@ const schema = new mongoose_1.Schema({
     title: { type: String, required: true },
     description: { type: String, required: true },
     img: { type: String, required: true },
-    colaborations: { type: String, required: true }
+    colaborations: { type: String, required: true },
+    web: { type: String, required: false },
 });
 exports.default = schema;

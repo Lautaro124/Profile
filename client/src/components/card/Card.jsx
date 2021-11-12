@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from '../../styles/default.module.css'
+import AwesomeSlider from 'react-awesome-slider'
+import 'react-awesome-slider/dist/styles.css'
 import { Link } from 'react-scroll'
 import { useSelector } from 'react-redux'
 
@@ -8,16 +10,33 @@ export default function Card({index, title, description, img, colaborations}) {
     // Traer el array para saber cuando se llego al final de este mismo
     const array = useSelector(state => state.project)
 
+    const images = JSON.parse(img)
+    const people = JSON.parse(colaborations)
+
     return (
         <section id={`page${index + 2}`} className={styles.cardContent}>
 
             <div className={styles.cardTitles}>
-                <h4>{title}</h4>
-                <span>{description}</span>
+                <h2>{title}</h2>
+                <div className={styles.cardDescription} dangerouslySetInnerHTML={{__html:description}}>
+                </div>
             </div>
-            <img className={styles.cardImg} src={img} alt= 'None'/>
+            <div className={styles.cardImg}>
+                <AwesomeSlider>
+                    {
+                        images?.map((e, i) => <div key={i} data-src={e}></div>)
+                    }
+                </AwesomeSlider>
+            </div>
             <div className={styles.cardReference}>
-                <h6>{colaborations}</h6>
+                {
+                    people?.map(e => 
+                        <div>
+                            <h4>{e.names}</h4>
+                            <a href={e.link}>{e.names}</a>                 
+                        </div>
+                    )
+                }
             </div>
             {/* 
                 Links para seguir la vista 
