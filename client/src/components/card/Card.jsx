@@ -31,10 +31,9 @@ export default function Card({index, title, description, img, colaborations}) {
             <div className={styles.cardReference}>
                 {
                     people?.map(e => 
-                        <div>
-                            <h4>{e.names}</h4>
-                            <a href={e.link}>{e.names}</a>                 
-                        </div>
+                        
+                        <h4>Linkedin: <a href={e.link}>{e.names}</a> </h4>                
+                        
                     )
                 }
             </div>

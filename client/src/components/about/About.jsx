@@ -12,23 +12,28 @@ export default function About() {
         <b>📢 Quien soy? 👀<br/></b>
           🌟 Estoy interesado en el desarrollo Full stack.<br/>
           🌟 Soy muy tenaz, ambicioso y no suelo parar hasta que el problema es resuelto.<br/>
-          🌟 Tengo una lado artístico muy bueno, que da lugar a que resuelva los problemas de una formas creativas, o que con pocas alternativas
-          puedo generar proyectos prometedores.<br/>
-          🌟 Normalmente no suelo confórmame con el 'producto final' y siempre busco maneras de optimizarlo o que quede mejor, por mas que ya este entregado.
+          🌟 Mi veta artística me lleva a resolver los conflictos de manera creativa.<br/>
+          🌟 Soy autodidacta y siempre busco optimizar los proyectos en los que estoy trabajando.
         </span>
         <span className={styles.span}>
           <b>📢Porque me tendrías que contactar? 👻<br/></b>
-          🌟 No tengo problema en parar mi proyecto para ayudar a los demás, siempre que tenga la posibilidad de hacerlo.<br/>
-          🌟 Soy muy proactivo, y me gusta dividir las tareas en grupo.
+          🌟 Soy colaborativo con mis compañeros de equipo, siento que es la base para aprender y crecer.<br/>
+          🌟 Aunque todavía no me pude desempeñar como tal, siento que tengo alma de líder.
         </span>
       </div>
       <div className={styles.secondColumn}>
         <div className={styles.list}>
           <h2>Lenguaje de programación</h2>
           <span className={styles.span}>
+            🌟 Javascript<br/>
+            🌟 Typescript<br/>
+          </span>
+        </div>
+        <div className={styles.list}>
+          <h2>Tecnologias</h2>
+          <span className={styles.span}>
             🌟 React<br/>
             🌟 React-Native<br/>
-            🌟 Javascript<br/>
             🌟 NodeJS<br/>
             🌟 Express<br/>
             🌟 Sequelize<br/>
@@ -39,6 +44,7 @@ export default function About() {
           <span className={styles.span}>
             🌟 MongoDB<br/>
             🌟 SQLite<br/>
+            🌟 postgres<br/>
             🌟 Firebase<br/>
           </span>
         </div>

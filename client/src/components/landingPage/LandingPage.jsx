@@ -7,7 +7,7 @@ export default function LandingPage() {
     return (
         <section id="landing-page" className={styles.content}>
             <h1 className={styles.title} >Bienvenido a mi portafolio</h1>
-            <h3 className={styles.subtitle} >Me llamo lautaro Gonzalez y soy desarrollador full stack</h3>
+            <h3 className={styles.subtitle} >Me llamo Lautaro y soy desarrollador Full Stack</h3>
             <Link to='page1' spy={true} smooth={true} delay={80}>
                 <button variant='contained' className={defaults.links}>
                     About me
