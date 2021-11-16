@@ -87,10 +87,35 @@
 }
 
 .cardReference{
+    height: 80%;
+    margin-top: 5%;
     grid-column: 3;
     grid-row: 3;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: flex-start;
     align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.contactContent{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.contactTitle{
+    grid-column: 2;
+    grid-row: 1;
+}
+.contactData{
+    grid-column: 2;
+    grid-row: 2;
+}
+.contactBack{
+    grid-column: 2;
+    grid-row: 3;
 }

@@ -33,9 +33,6 @@ export default function Home() {
                     )
                 }
             </section>
-            <section id='mobile'>
-                <h1>Mobile</h1>
-            </section>
             <Contact/>
         </div>
     )

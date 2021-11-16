@@ -54,11 +54,11 @@ export default function About() {
         */}
         <div className={styles.butons}>
           <Link to='web' spy={true} smooth={true} delay={80}>
-            <button className={defaults.links}>Ver Primer proyecto</button>
+            <button className={defaults.links}>Ver proyectos</button>
           </Link>
-          <Link to='mobile' spy={true} smooth={true} delay={80}>
+          {/* <Link to='mobile' spy={true} smooth={true} delay={80}>
             <button className={defaults.links}>Ver segundo proyecto</button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>
