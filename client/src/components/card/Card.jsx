@@ -4,6 +4,10 @@ import AwesomeSlider from 'react-awesome-slider'
 import 'react-awesome-slider/dist/styles.css'
 import { Link } from 'react-scroll'
 import { useSelector } from 'react-redux'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+AOS.init();
 
 export default function Card({index, title, description, img, colaborations}) {
 
@@ -17,18 +21,18 @@ export default function Card({index, title, description, img, colaborations}) {
         <section id={`page${index + 2}`} className={styles.cardContent}>
 
             <div className={styles.cardTitles}>
-                <h2>{title}</h2>
-                <div className={styles.cardDescription} dangerouslySetInnerHTML={{__html:description}}>
+                <h2 data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">{title}</h2>
+                <div data-aos="zoom-out-up" data-aos-delay="100" data-aos-duration="1000" className={styles.cardDescription} dangerouslySetInnerHTML={{__html:description}}>
                 </div>
             </div>
-            <div className={styles.cardImg}>
+            <div data-aos="flip-right" data-aos-delay="100" data-aos-duration="1000" className={styles.cardImg}>
                 <AwesomeSlider>
                     {
                         images?.map((e, i) => <div key={i} data-src={e}></div>)
                     }
                 </AwesomeSlider>
             </div>
-            <div className={styles.cardReference}>
+            <div  data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000" className={styles.cardReference}>
                 {
                     people?.map(e => 
                         

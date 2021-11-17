@@ -7,10 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var( --body-color);
   color: var( --color-Default);
-
-  overflow: hidden;
+  
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory ;
 }
 
+.silder section{
+  scroll-snap-align: center;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -21,6 +25,36 @@ button{
   color: var(--color-Default);
 }
 
+::-webkit-scrollbar{
+
+  width: 7px;
+  background: var(--body-color);
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: .25rem;
+  background: var( --background-color)
+}
+
+::-webkit-scrollbar-thumb:active{
+  background: var( --color-Default)
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: rgb(158, 158, 158)
+}
+
+::-webkit-scrollbar-track{
+  background: var(--body-color);
+}
+
+::-webkit-scrollbar-track:hover{
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-track:active{
+  background: var(--background-color);
+}
 
 :root{
   --body-color: rgb(17, 17, 17);
