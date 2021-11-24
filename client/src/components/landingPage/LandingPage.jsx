@@ -12,7 +12,7 @@ export default function LandingPage() {
         <section id="landing-page" className={styles.content}>
             <h1 data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000" className={styles.title} >Bienvenido a mi portafolio</h1>
             <h3 data-aos="fade-up-right" data-aos-delay="100" data-aos-duration="1000" className={styles.subtitle} >Me llamo Lautaro y soy desarrollador Full Stack</h3>
-            <Link to='page1' spy={true} smooth={true} delay={80}>
+            <Link to='about' className={styles.buton} spy={true} smooth={true} delay={80}>
                 <button className={defaults.links}>
                     About me
                 </button>

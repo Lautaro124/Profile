@@ -43,7 +43,7 @@
 
 .cardContent{
     display: grid;
-    grid-template-columns: 5% repeat(2, 1fr) 5%;
+    grid-template-columns: 15vh repeat(2, 1fr) 5%;
     grid-template-rows: 10% repeat(2, 1fr) 8%;
     gap: 2%;
 }
@@ -104,18 +104,18 @@
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 15vh 1fr;
+    grid-template-rows: 8vh repeat(3, 1fr);
 }
 .contactTitle{
     grid-column: 2;
-    grid-row: 1;
+    grid-row: 2;
 }
 .contactData{
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 3;
 }
 .contactBack{
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 4;
 }

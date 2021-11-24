@@ -18,7 +18,7 @@ export default function Card({index, title, description, img, colaborations}) {
     const people = JSON.parse(colaborations)
 
     return (
-        <section id={`page${index + 2}`} className={styles.cardContent}>
+        <section key={title}  id={`page${index }`} className={styles.cardContent}>
 
             <div className={styles.cardTitles}>
                 <h2 data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">{title}</h2>
@@ -45,7 +45,7 @@ export default function Card({index, title, description, img, colaborations}) {
                 Links para seguir la vista 
             */}
             <div className={styles.cardButtons}>
-                <Link to={`page${index + 1}`} spy={true} smooth={true} delay={80}>
+                <Link to={`page${index - 1}`} spy={true} smooth={true} delay={80}>
                     <button className={styles.links} >{'<-- '}Back</button>
                 </Link>
                 <Link to={`landing-page`} spy={true} smooth={true} delay={80}>
@@ -53,7 +53,7 @@ export default function Card({index, title, description, img, colaborations}) {
                 </Link>
                 {
                     array.length !== index + 1?
-                    <Link to={`page${index + 3}`} spy={true} smooth={true} delay={80}>
+                    <Link to={`page${index + 1}`} spy={true} smooth={true} delay={80}>
                         <button className={styles.links} >Next{' -->'}</button>
                     </Link>: 
                     <Link to='contact' spy={true} smooth={true} delay={80}>

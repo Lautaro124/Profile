@@ -5,6 +5,7 @@ import Contact from '../contact/Contact'
 import { useSelector } from 'react-redux'
 import About from '../about/About'
 import styles from '../../styles/default.module.css'
+import Nav from '../navBar/Nav'
 
 export default function Home() {
 
@@ -15,16 +16,17 @@ export default function Home() {
 
     return (
         <div className={styles.projectContent}>
+            <Nav />
             
             <LandingPage/>
-            <section id='page1' className={styles.titleContent}>
+            <section id='about' className={styles.titleContent}>
                 <About/>
             </section>
             <section id='web'>
                 {
                     projects?.map((project, index) => 
                         <Card
-                            key={index} 
+                            key={index}
                             title={project.title} 
                             description={project.description}
                             img={project.img} 
