@@ -36,7 +36,13 @@ export default function Card({index, title, description, img, colaborations}) {
                 {
                     people?.map(e => 
                         
-                        <a key={e.names} href={e.link}>{e.names}</a>               
+                        <a className={styles.linkRef} key={e.names} href={e.link}>
+                            <img
+                                className={styles.imgLink} 
+                                src ={'https://www.pngall.com/wp-content/uploads/2016/07/Linkedin-PNG-Picture.png'}
+                                alt='No hay imagen'/>
+                            {e.names}
+                        </a>               
                         
                     )
                 }

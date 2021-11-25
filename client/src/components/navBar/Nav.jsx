@@ -42,7 +42,7 @@ export default function Nav() {
       </Link>
       <Link className={value.about === false? style.link: style.activeLink} onClick={() => handlerChange('about')} to='about' spy={true} smooth={true} delay={80}>
         <h4 className={style.text}>
-          About
+          Acerca de mi
         </h4>
       </Link>
       <Link className={value.project === false? style.link: style.activeLink} onClick={() => handlerChange('web')} to='web' spy={true} smooth={true} delay={80}>

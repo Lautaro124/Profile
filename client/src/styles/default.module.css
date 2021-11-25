@@ -100,6 +100,18 @@
     overflow-y: auto;
 }
 
+.linkRef{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-Default);
+    text-decoration: none;
+}
+
+.imgLink{
+    width: 4vh;
+    height: 4vh;
+}
 .contactContent{
     width: 100%;
     height: 100vh;
