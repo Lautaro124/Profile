@@ -36,7 +36,7 @@ export default function Card({index, title, description, img, colaborations}) {
                 {
                     people?.map(e => 
                         
-                        <h4>Linkedin: <a href={e.link}>{e.names}</a> </h4>                
+                        <a key={e.names} href={e.link}>{e.names}</a>               
                         
                     )
                 }

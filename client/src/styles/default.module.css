@@ -92,9 +92,9 @@
     grid-column: 3;
     grid-row: 3;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    align-content: flex-start;
+    justify-content: space-evenly;
+    align-items: baseline;
+    align-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
     overflow-y: auto;

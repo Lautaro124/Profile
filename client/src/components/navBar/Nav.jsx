@@ -4,50 +4,53 @@ import { Link } from 'react-scroll'
 
 export default function Nav() {
 
-  var [inicio, setInicio] = useState(false)
-  var [about, setAbout] = useState(false)
-  var [project, setProject] = useState(false)
-  var [contact, setContact] = useState(false)
+  const initialValue = {
+    inicio: false,
+    about: false,
+    project: false,
+    contact: false,
+  }
+  const [value, setValue] = useState(initialValue)
 
   const handlerChange =  (e) => {
     switch (e){
       case 'landing-page':
-        setInicio(!inicio)
+        setValue({...initialValue, inicio: true})
         break;
       
       case 'about':
-        setAbout(about)
+        setValue({...initialValue, about: true})
         break;
 
       case 'web':
-        setProject(!project)
+        setValue({...initialValue, project: true})
         break;
       
       case 'contact':
-        setContact(!contact)
+        setValue({...initialValue, contact: true})
         break;
 
-      default: inicio = true
+      default: return value
     }
   }
   return (
     <div className={style.content}>
-      <Link className={inicio === false? style.link: style.activeLink} onSetActive={e => handlerChange(e)} to='landing-page' spy={true} smooth={true} delay={80}>
+      <Link className={value.inicio === false? style.link: style.activeLink} onClick={() => handlerChange('landing-page')} to='landing-page' spy={true} smooth={true} delay={80}>
         <h4 className={style.text}>
           Inicio
         </h4>
       </Link>
-      <Link className={about === false? style.link: style.activeLink} onSetActive={e => handlerChange(e)} to='about' spy={true} smooth={true} delay={80}>
+      <Link className={value.about === false? style.link: style.activeLink} onClick={() => handlerChange('about')} to='about' spy={true} smooth={true} delay={80}>
         <h4 className={style.text}>
           About
         </h4>
       </Link>
-      <Link className={project === false? style.link: style.activeLink} onSetActive={e => handlerChange(e)} to='web' spy={true} smooth={true} delay={80}>
+      <Link className={value.project === false? style.link: style.activeLink} onClick={() => handlerChange('web')} to='web' spy={true} smooth={true} delay={80}>
         <h4 className={style.text}>
           Projects
         </h4>
       </Link>
-      <Link className={contact === false? style.link: style.activeLink} onSetActive={e => handlerChange(e)} to='contact' spy={true} smooth={true} delay={80}>
+      <Link className={value.contact === false? style.link: style.activeLink} onClick={() => handlerChange('contact')} to='contact' spy={true} smooth={true} delay={80}>
         <h4 className={style.text}>
           Contact me
         </h4>

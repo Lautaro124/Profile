@@ -1,6 +1,7 @@
 .content{
   width: 15vh;
   height: 100vh;
+  text-align: left;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -12,6 +13,7 @@
 .link{
   padding-top: 2%;
   padding-bottom: 2%;
+  border-radius: .5rem;
 }
 
 .text{
@@ -20,18 +22,19 @@
 }
 
 .activeLink{
+  border-radius: .5rem;
   padding-top: 2%;
   padding-bottom: 2%;
   animation: OnActiveLink;
   animation-duration: 1s;
-  box-shadow: rgba(255, 255, 255, 0.35) -25px 0px 26px -15px inset;
+  box-shadow: rgba(255, 255, 255, 0.4) -5px 0px 2px inset, rgba(190, 190, 190, 0.3) -10px 0px 2px inset, rgba(100, 100, 100, 0.2) -15px 0px 2px inset, rgba(85, 85, 85, 0.1) -20px 0px 2px inset, rgba(26, 26, 26, 0.05) -25px 0px 2px inset;
 }
 
 @keyframes OnActiveLink {
   from {
-    box-shadow: rgba(255, 255, 255, 0.35) -25px 0px 0px -15px inset;
+    box-shadow: rgba(46, 65, 240, 0.4) 0px 0px inset, rgba(46, 49, 240, 0.3) 0px 0px inset, rgba(46, 59, 240, 0.2) 0px 0px inset, rgba(46, 49, 240, 0.1) 0px 0px inset, rgba(49, 46, 240, 0.05) 0px 0px inset;
   }
   to {
-    box-shadow: rgba(255, 255, 255, 0.35) -25px 0px 26px -15px inset;
+    box-shadow: rgba(255, 255, 255, 0.4) -5px 0px 2px inset, rgba(190, 190, 190, 0.3) -10px 0px 2px inset, rgba(100, 100, 100, 0.2) -15px 0px 2px inset, rgba(85, 85, 85, 0.1) -20px 0px 2px inset, rgba(26, 26, 26, 0.05) -25px 0px 2px inset;
   }
 }
